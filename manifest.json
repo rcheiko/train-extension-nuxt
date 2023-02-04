@@ -1,0 +1,59 @@
+{
+    "manifest_version": 2,
+    "name": "Nom de votre extension",
+    "version": "1.0.0",
+    "description": "Description de votre extension",
+    "icons": {
+        "16": "path/to/icon16.png",
+        "32": "path/to/icon32.png",
+        "48": "path/to/icon48.png",
+        "128": "path/to/icon128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "http://*/",
+        "https://*/"
+    ],
+    "background": {
+        "scripts": [
+            "path/to/background.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "path/to/icon16.png",
+            "32": "path/to/icon32.png"
+        },
+        "default_title": "Titre de votre extension",
+        "default_popup": "path/to/popup.html"
+    },
+    "options_page": "path/to/options.html",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/",
+                "https://*/"
+            ],
+            "css": [
+                "path/to/content_script.css"
+            ],
+            "js": [
+                "path/to/content_script.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        "path/to/web_accessible_resource.js"
+    ],
+    "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+    "web_url": "https://www.example.com/",
+    "incognito": "spanning",
+    "minimum_chrome_version": "22.0.0.0",
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "author": "Nom de l'auteur",
+    "homepage_url": "https://www.example.com/home",
+    "offline_enabled": true
+}
